@@ -1,0 +1,127 @@
+html, body{
+  height: 100%;
+  margin: 0;
+  color: #fff;
+  /* Font from google fonts */
+  font-family: 'Montserrat', sans-serif; 
+
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+body{
+  background: url(../images/Main.svg) no-repeat;
+  background-size: cover;
+  padding-bottom: 500px;
+  left: 0;
+}
+
+#left{
+  position: absolute;
+  top: 60%;
+}
+
+#right{
+  position: absolute;
+  top: 20%;
+  right: 0;
+  z-index: 1;
+}
+
+nav{
+  padding: 50px;
+}
+
+nav ul{
+  list-style-type: none;
+  float: right;
+}
+
+nav li{
+  float: left;
+}
+
+nav ul li a{
+  color: #000000;
+  padding: 0 30px;
+}
+
+#logo{
+  font-size: 2em;
+}
+
+.container{
+  text-align: center;
+  width: 60%;
+  margin: 110px auto;
+}
+
+
+#wordArt{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: fill 0.5s ease forwards 2.3s;
+}
+
+
+/* The actual magic starts here */
+.container #wordArt path:nth-child(1){
+  stroke-dasharray: 549.0667724609375;
+  stroke-dashoffset: 549.0667724609375;
+  animation: anim 2s ease forwards;
+}
+
+/* Moves the dash and creates effect like connected one */
+.container #wordArt path:nth-child(2){
+  stroke-dasharray: 506;
+  stroke-dashoffset: 506;
+  animation: anim 2s ease forwards 0.3s;
+}
+
+.container #wordArt path:nth-child(3){
+  stroke-dasharray: 316;
+  stroke-dashoffset: 316;
+  animation: anim 2s ease forwards 0.6s;
+}
+
+.container #wordArt path:nth-child(4){
+  stroke-dasharray: 515;
+  stroke-dashoffset: 515;
+  animation: anim 2s ease forwards 0.9s;
+}
+
+.container #wordArt path:nth-child(5){
+  stroke-dasharray: 515;
+  stroke-dashoffset: 515;
+  animation: anim 2s ease forwards 1.2s;
+}
+
+.container #wordArt path:nth-child(6){
+  stroke-dasharray: 581;
+  stroke-dashoffset: 581;
+  animation: anim 2s ease forwards 1.5s;
+}
+
+/* It completes the dashed strokes to a bordered letter */
+@keyframes anim{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Fill the whole word with white color, after dashed strokes are connected is done */
+@keyframes fill{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: white
+  }
+}
+
+ 
